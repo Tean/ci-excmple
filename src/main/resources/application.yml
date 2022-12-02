@@ -3,3 +3,5 @@ server.port: 8081
 mysql:
   username: admin
   password: lsdjfyu29452457910
+
+auth: true
