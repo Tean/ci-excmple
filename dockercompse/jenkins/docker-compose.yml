@@ -1,0 +1,22 @@
+version: '3'
+services:
+  docker_jenkins:
+    restart: always
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    volumes:
+      - data:/var/jenkins_home
+      - run:/var/run
+      - bin:/usr/bin
+networks:
+  default:
+    name: sonarqube_sonar-network
+    external: true
+volumes:
+  data:
+  run:
+  bin:
+
